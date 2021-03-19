@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse('<h1>Cat Collector</h1>')
+    return render(request, 'index.html')
 
 def about(request):
     lorem_ipsum= "lorem ipsum dolor sit amet, etc"
@@ -11,6 +11,10 @@ def about(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+# def index(request):
+#     return render(request, 'index.html')
+
 
     # 1. make a view function
     # 2. make the html page
